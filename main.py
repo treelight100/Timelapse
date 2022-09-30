@@ -43,18 +43,18 @@ carryOn = True
 
 clock = pygame.time.Clock()
 pygame.font.init()
-font = pygame.font.Font(None, 24)
+font = pygame.font.Font(None, 20)
 img = font.render('click below to get started', True, white)
 screen.blit(img, (20, 20))
 
-font = pygame.font.Font(None, 48)
+font = pygame.font.Font(None, 20)
 fonts = pygame.font.get_fonts()
-font1 = pygame.font.Font('Fonts\Quick.ttf', 72)
+font1 = pygame.font.Font(None, 72)
 img1 = font1.render('Timelapse', True, red)
 
 
 
-font2 = pygame.font.Font('Fonts\G_ari_i.TTF', 15)
+font2 = pygame.font.Font(None, 20)
 img3 = font2.render('type how long do you want between photos:', True, white)
 img4 = font2.render('type how long do you want to take photos for:', True, white)
 img5 = font2.render('amount of photos:', True, white)
@@ -63,7 +63,7 @@ w, h = pygame.display.get_surface().get_size()
 hours_photo = 'hh'
 minutes_photo = 'mm'
 seconds_photo = 'ss'
-base_font = pygame.font.Font("Fonts\G_ari_i.TTF", 15)
+base_font = pygame.font.Font(None, 20)
 color_active = pygame.Color('lightskyblue3')
 color_passive = pygame.Color('chartreuse4')
 color = color_passive
@@ -72,7 +72,7 @@ text_color_passive = pygame.Color(127, 200, 127)
 text_color = text_color_passive
 
 def button(screen, position, rectColor, txtColor, text,):
-    font = pygame.font.Font("Fonts\G_ari_i.TTF", 50)
+    font = pygame.font.Font(None, 60)
     text_render = font.render(text, 1, txtColor)
     x, y, w , h = text_render.get_rect()
     x, y = position
@@ -121,7 +121,6 @@ def InputText(user_text, active, orignal_text, max_len, position):
     pygame.draw.rect(screen, color, text_rect)
 
     text_surface = base_font.render(user_text, True, text_color)
-
 
     screen.blit(text_surface, (text_rect.x + 5, text_rect.y + 5))
 
@@ -277,8 +276,8 @@ while carryOn:
         screen.fill((0, 150, 150))
         if not change and not next:
             b1 = button(screen, (w/2.5, h/1.25), red, white,"Start")
-            screen.blit(img, (w/2.8, h/2.8))
-            screen.blit(img1, (w/2.7, h/4))
+            screen.blit(img, (w/3.1, h/2.8))
+            screen.blit(img1, (w/3.2, h/3.6))
         if change:
 
 
