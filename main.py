@@ -43,18 +43,18 @@ carryOn = True
 
 clock = pygame.time.Clock()
 pygame.font.init()
-font = pygame.font.SysFont(None, 24)
+font = pygame.font.Font(None, 24)
 img = font.render('click below to get started', True, white)
 screen.blit(img, (20, 20))
 
-font = pygame.font.SysFont(None, 48)
+font = pygame.font.Font(None, 48)
 fonts = pygame.font.get_fonts()
-font1 = pygame.font.SysFont('Timelapse', 72)
+font1 = pygame.font.Font('Fonts\Quick.ttf', 72)
 img1 = font1.render('Timelapse', True, red)
 
 
 
-font2 = pygame.font.SysFont('bop.ttc', 20)
+font2 = pygame.font.Font('Fonts\G_ari_i.TTF', 15)
 img3 = font2.render('type how long do you want between photos:', True, white)
 img4 = font2.render('type how long do you want to take photos for:', True, white)
 img5 = font2.render('amount of photos:', True, white)
@@ -72,7 +72,7 @@ text_color_passive = pygame.Color(127, 200, 127)
 text_color = text_color_passive
 
 def button(screen, position, rectColor, txtColor, text,):
-    font = pygame.font.SysFont("Arial", 50)
+    font = pygame.font.Font("Fonts\G_ari_i.TTF", 50)
     text_render = font.render(text, 1, txtColor)
     x, y, w , h = text_render.get_rect()
     x, y = position
@@ -277,7 +277,7 @@ while carryOn:
         screen.fill((0, 150, 150))
         if not change and not next:
             b1 = button(screen, (w/2.5, h/1.25), red, white,"Start")
-            screen.blit(img, (w/3, h/3))
+            screen.blit(img, (w/2.8, h/2.8))
             screen.blit(img1, (w/2.7, h/4))
         if change:
 
