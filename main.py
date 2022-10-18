@@ -21,7 +21,7 @@ def takePicture(cam_to_use):
         time.sleep(1)
         img = cam.get_image()
         cam.stop()
-        photo_name = "pictures/photo_" + str(takePicture.counter) + ".png"
+        photo_name = "pictures\photo_" + str(takePicture.counter) + ".png"
         takePicture.counter += 1
         pygame.image.save(img ,photo_name)
         imq = img
